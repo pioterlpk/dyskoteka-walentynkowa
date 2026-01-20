@@ -247,6 +247,70 @@ document.querySelectorAll(".gallery video").forEach(v=>{
   v.addEventListener("pause",()=>bgAudio.volume=1);
   v.addEventListener("ended",()=>bgAudio.volume=1);
 });
+
+  <script>
+/* WYKRYWANIE PRÓB NAGRYWANIA / SCREENA */
+let blocked = false;
+
+function blockPage() {
+  if (blocked) return;
+  blocked = true;
+
+  document.body.innerHTML = `
+    <div style="
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:black;
+      color:red;
+      font-size:3rem;
+      font-weight:bold;
+      text-align:center;
+      padding:20px;
+    ">
+      🚫 NAWET NIE PRÓBUJ 🚫
+    </div>
+  `;
+
+  try {
+    const audio = document.getElementById("bgAudio");
+    if (audio) audio.pause();
+  } catch(e){}
+}
+
+/* ZMIANA KARTY / MINIMALIZACJA */
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    blockPage();
+  }
+});
+
+/* WYJŚCIE Z OKNA */
+window.addEventListener("blur", () => {
+  blockPage();
+});
+
+/* PRINT SCREEN (częściowo) */
+window.addEventListener("keyup", (e) => {
+  if (e.key === "PrintScreen") {
+    blockPage();
+  }
+});
+
+/* DEVTOOLS */
+setInterval(() => {
+  const threshold = 160;
+  if (
+    window.outerWidth - window.innerWidth > threshold ||
+    window.outerHeight - window.innerHeight > threshold
+  ) {
+    blockPage();
+  }
+}, 1000);
+</script>
+
 </script>
 </body>
 </html>
+
