@@ -6,15 +6,18 @@
 <title>Dyskoteka Walentynkowa - Luty 2026</title>
 
 <style>
-body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#ff6a88;color:white;overflow-x:hidden;
-background-image: url("https://res.cloudinary.com/dqloszyfj/image/upload/v1769031832/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview_buvdo8.png");
-background-size: cover;        /* dopasowuje do ekranu */
-background-position: center;   /* wyśrodkowane */
-background-repeat: no-repeat;
-background-attachment: fixed;  /* tło się nie przesuwa */
-background-color: #ff6a88;     /* kolor, który widać pod obrazem */
-background-blend-mode: lighten;/* miks z kolorem */
-opacity: 0.9;                  /* prawie przezroczyste */
+body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#ff6a88;color:white;overflow-x:hidden;}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("https://res.cloudinary.com/dqloszyfj/image/upload/v1769031832/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview_buvdo8.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:0.15;
+  z-index:-1;
 }
 
 #passwordScreen{height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;padding:20px;}
@@ -210,8 +213,3 @@ document.querySelectorAll(".gallery video").forEach(v=>{
 </script>
 </body>
 </html>
-
-
-
-
-
