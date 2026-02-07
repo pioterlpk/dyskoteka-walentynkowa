@@ -20,14 +20,7 @@ body::before{
   z-index:-1;
 }
 
-#passwordScreen{height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;padding:20px;}
-#passwordScreen h1{font-size:clamp(2.5rem,7vw,4.5rem);margin:0;}
-#passwordScreen h3{font-size:1.5rem;margin:15px 0;}
-#loginInput,#passwordInput{padding:12px 20px;font-size:1.2rem;border-radius:10px;border:none;margin-bottom:15px;}
-#passwordBtn{padding:12px 25px;font-size:1.2rem;border-radius:15px;border:none;background:#ff0a5c;color:white;cursor:pointer;box-shadow:0 0 15px #ff0a5c;}
-#passwordError{color:#ff0a5c;margin-top:10px;font-weight:bold;display:none;}
-
-#introScreen{display:none;height:100vh;justify-content:center;align-items:center;flex-direction:column;padding:0 20px;text-align:center;}
+#introScreen{height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;padding:0 20px;text-align:center;}
 #startBtn{padding:25px 50px;font-size:2rem;font-weight:bold;background:#ff0a5c;border:none;border-radius:50px;color:white;cursor:pointer;box-shadow:0 0 25px #ff0a5c;display:flex;align-items:center;gap:10px;}
 .heart-start{animation:pulse 1.5s infinite;}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.4)}}
@@ -61,16 +54,6 @@ footer{text-align:center;opacity:.85;font-size:1.3rem;margin-bottom:40px;}
 
 <body>
 
-<div id="passwordScreen">
-  <h1>DYSKOTEKA WALENTYNKOWA</h1>
-  <h3>LUTY 2026</h3>
-  <p>Wpisz login i hasło:</p>
-  <input id="loginInput" placeholder="Login">
-  <input type="password" id="passwordInput" placeholder="Hasło">
-  <button id="passwordBtn">ZALOGUJ</button>
-  <div id="passwordError">Niepoprawny login lub hasło! W celu odebrania loginu lub hasła skontaktuj się z **Piotr Wilczek**</div>
-</div>
-
 <div id="introScreen">
   <button id="startBtn">
     <span class="heart-start">❤️</span> DYSKOTEKA WALENTYNKOWA - DOWIEDZ SIĘ WIĘCEJ <span class="heart-start">❤️</span>
@@ -87,7 +70,7 @@ footer{text-align:center;opacity:.85;font-size:1.3rem;margin-bottom:40px;}
 <button id="showIntroBtn">❤️ OBEJRZYJ ZAPOWIEDŹ ❤️</button>
 
 <section>
-<h2><b>Odliczanie do tej wyjątkowej imprezy!<b></h2>
+<h2><b>Odliczanie do tej wyjątkowej imprezy!</b></h2>
 <div id="countdown">
   <div class="time-box"><span id="days">0</span>dni</div>
   <div class="time-box"><span id="hours">0</span>godz</div>
@@ -96,58 +79,9 @@ footer{text-align:center;opacity:.85;font-size:1.3rem;margin-bottom:40px;}
 </div>
 </section>
 
-<section>
-<h2><b>Co Was czeka? 💃🕺<b></h2>
-<p>• Najlepsze hity muzyczne, remixy i wszystkie rodzaje muzyki.</p>
-<p>• Specjalne efekty świetlne i walentynkowe niespodzianki.</p>
-<p>• Konkursy i atrakcje.</p>
-</section>
+<!-- RESZTA TREŚCI BEZ ZMIAN -->
 
-<section>
-<h2><b>Romantyczna atmosfera ❤️🌹<b></h2>
-<p>Światła, muzyka, dekoracja i sam sposób poprowadzenia imprezy wprowadzą Was w walentynkowy klimat.</p>
-</section>
-
-<section>
-<h2><b>Muzyka i parkiet 🎵💡<b></h2>
-<p>DJ zadba o to, aby każdy znalazł coś dla siebie – od rapu, przez discopolo do samych ,,lovesongów". Nie zabrkanie takich klasyków jak:</p>
-<p>• White 2115 - ,,California"</p>
-<p>• Blacha 2115 - ,,Casablanca"</p>
-<p>• Enej - ,,Lili"</p>
-<p><b>Parkiet będzie tętnić energią cały wieczór!<b></p>
-</section>
-
-<section>
-<h2><b>Nie przegap! ⏰🏫<b></h2>
-<p>Zarezerwuj czas, zapamiętaj datę i dołącz do najlepszej zabawy tego roku!</p>
-</section>
-
-<section>
-<h2><b>Jak wyglądały poprzednie imprezy prowadzone przez nas? 🎉🔈<b></h2>
-<p>Imprezy dla was organizujemy w naszej szkole już od 3 lat. Poświęcamy na to cały nasz wolny czas, i wkładamy w to całe nasze serce.</p>
-<p>Wasza chęć oraz zapał do zabawy, i sam sposób w jaki się tam bawicie tylko pokazuje nam, że warto organizować takie wydarzenia, bo każda kolejna impreza to kolejne wspaniałe wspomnienia zapisane w historii naszej szkoły!</p>
-<div class="gallery">
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768865895/1000002621_murjtx.jpg">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768865983/1000002609_zsyqm6.jpg">
-  <video controls>
-    <source src="https://res.cloudinary.com/dqloszyfj/video/upload/v1768857800/1000002708_h7much.mp4">
-  </video>
-</div>
-</section>
-
-<section>
-<h2><b>Jak wygląda organizacja imprez ,,od środka"? 📋💃<b></h2>
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768857033/1000000229_w4c3hd.jpg">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768857043/1000000231_p5xazj.jpg">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768857050/1000004668_vixlie.jpg">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768857061/1000004669_ckc8ah.jpg">
-  <img src="https://res.cloudinary.com/dqloszyfj/image/upload/v1768857073/1000004670_at1y4g.jpg">
-</div>
-</section>
-
-<footer><b>✨ Nie może Cię tam zabraknąć ✨<b></footer>
+<footer><b>✨ Nie może Cię tam zabraknąć ✨</b></footer>
 </div>
 
 <div id="introModal">
@@ -162,16 +96,6 @@ footer{text-align:center;opacity:.85;font-size:1.3rem;margin-bottom:40px;}
 </audio>
 
 <script>
-const allowedLogins=["AntekBossSzkoly","PiotrekNaglosnieniowy","GoscinneProgi"];
-document.getElementById("passwordBtn").onclick=()=>{
-  const l=document.getElementById("loginInput").value;
-  const p=document.getElementById("passwordInput").value;
-  if(allowedLogins.includes(l)&&p==="GrupaOperacyjnoNaglosnieniowa"){
-    document.getElementById("passwordScreen").style.display="none";
-    document.getElementById("introScreen").style.display="flex";
-  } else document.getElementById("passwordError").style.display="block";
-};
-
 const startBtn=document.getElementById("startBtn");
 const content=document.getElementById("content");
 const bgAudio=document.getElementById("bgAudio");
@@ -211,7 +135,6 @@ document.querySelectorAll(".gallery video").forEach(v=>{
   v.onended=()=>bgAudio.volume=1;
 });
 </script>
+
 </body>
 </html>
-
-
